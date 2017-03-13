@@ -6,6 +6,9 @@ import ConfigParser
 import traceback
 import os
 
+def readint(fname, section, key, default=None, errmsg=None):
+    return int(read(fname, section, key, default=default, errmsg=errmsg))
+
 def read(fname, section, key, default=None, errmsg=None):
     '''
     发生错误时，返回 default
